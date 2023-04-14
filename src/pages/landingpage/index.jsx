@@ -1,18 +1,13 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes,Route } from 'react-router-dom'
+import styles from './landing.module.css';
 
-import Home from '../homepage'
-import Login from '../loginpage'
 
-export default function index() {
+export default function Landing() {
   return (
     <div>
-        <Router>
-            <Routes>
-                <Route path="/" element={<Home/>}/>
-                <Route path="/login" element={<Login/>}/>
-            </Routes>
-        </Router>
+        <h1>Landing page</h1>
     </div>
   )
 }
+
