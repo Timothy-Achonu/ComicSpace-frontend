@@ -3,6 +3,6 @@ import './Login.css'
 
 export default function Login() {
   return (
-    <div>Login</div>
+    <div className='first'>Login</div>
   )
 }
