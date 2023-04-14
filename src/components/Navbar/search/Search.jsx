@@ -6,7 +6,7 @@ export default function Search() {
   return (
     <div className={styles.wrapper}>
         <CiSearch className={styles.searchLogo} />
-        <input type="text" />
+        <input type="text" placeholder='Search for items'/>
     </div>
   )
 }
