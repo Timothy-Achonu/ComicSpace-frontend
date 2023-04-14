@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./home.module.css";
-import Navbar from "./Navbar/Navbar.jsx";
+import Navbar from "../../components/Navbar/Navbar";
 
-export default function index() {
+export default function Home() {
   return (
     <header className={styles.container}>
       <div className={styles.helpLangWrapper}>

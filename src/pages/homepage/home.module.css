@@ -26,9 +26,9 @@
       rgba(39, 6, 92, 0.7) 59.7%,
       rgba(39, 6, 92, 0.5)
     ),
-    url("../../assets/heroSectionBg.png") no-repeat center center / cover;
+    url("../../assets/HeroSection.png") no-repeat center center / cover;
   /* background: linear-gradient(80deg, white 22.7%, rgba(256, 256, 256, 0.3)),
     url("../../assets/images/trendingImage.PNG") no-repeat center center / cover; */
   /* background: rgba(39, 6, 92, 0.4); */
-  height: 400px;
+  height: 600px;
 }
