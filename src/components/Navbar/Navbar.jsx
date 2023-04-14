@@ -19,7 +19,7 @@ export default function Navbar() {
             <BsCartDash />
         </div>
         <NavLink to="/login" >Login</NavLink>
-        <NavLink to="/register">Register</NavLink>
+        <NavLink to="/register" className={styles.registerBtn}>Register</NavLink>
     </nav>
   )
 }

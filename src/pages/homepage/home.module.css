@@ -9,15 +9,22 @@
   background: rgba(39, 6, 92, 1);
   color: white;
   padding: 10px;
+  align-items: center;
 }
 .helpLangWrapper > select {
   background: rgba(39, 6, 92, 1);
   color: white;
   border: none;
   outline: none;
+  width: fit-content;
 }
 .helpLangWrapper > select:first-of-type {
   margin-left: auto;
+  /* background-color: yellow; */
+  width: 56px;
+}
+.helpLangWrapper > select:last-of-type {
+    margin-left: 15px;
 }
 
 .headerMidSection {
@@ -32,11 +39,26 @@
 
 .heroTextsButtonWrapper {
     color: white;
-    width: 47%;
+    width: 50%;
     padding: 40px 0;
+    margin-top: 50px;
 }
+
 /* .heroTextsButtonWrapper > p {
 } */
 .heroTextsButtonWrapper > p:first-of-type {
-    font-size: 3rem;
+    font-size: 3.5rem;
+}
+.heroTextsButtonWrapper > p:last-of-type {
+    color: rgba(210, 207, 215, 1);
+    margin: 35px 0;
+}
+.heroTextsButtonWrapper > button {
+    width: 120px;
+    background-color: inherit;
+    color: rgba(210, 207, 215, 1);
+    padding: 10px 0;
+    border: 1px solid rgba(210, 207, 215, 1);
+    border-radius: 15px;
+    cursor: pointer;
 }
