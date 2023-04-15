@@ -12,6 +12,7 @@
     margin-top: 25px;
     padding: 0 20px;
     border-radius: 8px;
+    cursor: pointer;
 }
 .container > *{
    margin-bottom: 16px;
@@ -21,10 +22,14 @@
     font-size: 1.8rem;
     margin-top: auto;
     color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
 }
 .comicPrice {
     display: flex;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
 }
 .comicPrice > span {
  color:rgba(235, 72, 62, 1);

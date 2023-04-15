@@ -2,13 +2,33 @@ import React from "react";
 import styles from "./home.module.css";
 import Navbar from "../../components/Navbar/Navbar";
 import BookCover from "../../components/BookCover/BookCover";
-import imgSrc from "../../assets/comingSoonComic.png";
+import greenLanternImg from "../../assets/comingSoonComic.png";
 import idw from "../../assets/idw.png";
 import dc from "../../assets/dc.png";
 import darkhorse from "../../assets/darkhorse.png";
 import clown from "../../assets/clown.png";
+// import { useStateProvider } from "./utilities/StateProvider";
+import { useStateProvider } from "../../utilities/StateProvider";
+import { reducerCases } from "../../utilities/Constants";
+// import { reducerCases } from "./utilities/Constants";
 
 export default function Home() {
+  const [initialState, dispatch] = useStateProvider();
+  const bestSellingComics = {
+    first: [],
+    second: [],
+    third: [],
+  };
+  for (let i = 0; i < 3; i++) {
+    bestSellingComics.first.push(initialState.books[i]);
+  }
+  for (let i = 3; i < 6; i++) {
+    bestSellingComics.second.push(initialState.books[i]);
+  }
+  for (let i = 6; i < 9; i++) {
+    bestSellingComics.third.push(initialState.books[i]);
+  }
+  console.log("bestSelling", bestSellingComics);
   return (
     <div className={styles.container}>
       <header>
@@ -64,45 +84,40 @@ export default function Home() {
         </div>
         <div className={styles.bestSellingComics}>
           <h2>Best Selling Comics</h2>
+
           <div>
-            <BookCover
-              name="Shuri The Warrior"
-              price={3200}
-              rating={4}
-              imgSrc={imgSrc}
-            />
-            <BookCover
-              name="Shuri The Warrior"
-              price={3200}
-              rating={4}
-              imgSrc={imgSrc}
-            />
-            <BookCover
-              name="Shuri The Warrior"
-              price={3200}
-              rating={2}
-              imgSrc={imgSrc}
-            />
+            {initialState.books.length ? (
+              bestSellingComics.first.map((comic) => {
+                return (
+                  <BookCover
+                    name={comic.title}
+                    price={3200}
+                    rating={4}
+                    imgSrc={comic.coverImageUrl}
+                    key={comic._id}
+                  />
+                );
+              })
+            ) : (
+              <h1>Loading...</h1>
+            )}
           </div>
           <div>
-            <BookCover
-              name="Shuri The Warrior"
-              price={3200}
-              rating={4}
-              imgSrc={imgSrc}
-            />
-            <BookCover
-              name="Shuri The Warrior"
-              price={3200}
-              rating={4}
-              imgSrc={imgSrc}
-            />
-            <BookCover
-              name="Shuri The Warrior"
-              price={3200}
-              rating={2}
-              imgSrc={imgSrc}
-            />
+            {initialState.books.length ? (
+              bestSellingComics.second.map((comic) => {
+                return (
+                  <BookCover
+                    name={comic.title}
+                    price={3200}
+                    rating={4}
+                    imgSrc={comic.coverImageUrl}
+                    key={comic._id}
+                  />
+                );
+              })
+            ) : (
+              <h1>Loading...</h1>
+            )}
           </div>
         </div>
         <div className={styles.topComics}>
@@ -133,52 +148,94 @@ export default function Home() {
         <div className={styles.latestReleases}>
           <h2>Latest Releases</h2>
           <div>
-            <BookCover
-              name="Shuri The Warrior"
-              price={3200}
-              rating={4}
-              imgSrc={imgSrc}
-            />
-            <BookCover
-              name="Shuri The Warrior"
-              price={3200}
-              rating={4}
-              imgSrc={imgSrc}
-            />
-            <BookCover
-              name="Shuri The Warrior"
-              price={3200}
-              rating={2}
-              imgSrc={imgSrc}
-            />
+            {initialState.books.length ? (
+              bestSellingComics.third.map((comic) => {
+                return (
+                  <BookCover
+                    name={comic.title}
+                    price={3200}
+                    rating={4}
+                    imgSrc={comic.coverImageUrl}
+                    key={comic._id}
+                  />
+                );
+              })
+            ) : (
+              <h1>Loading...</h1>
+            )}
           </div>
           <div>
-            <BookCover
-              name="Shuri The Warrior"
-              price={3200}
-              rating={4}
-              imgSrc={imgSrc}
-            />
-            <BookCover
-              name="Shuri The Warrior"
-              price={3200}
-              rating={4}
-              imgSrc={imgSrc}
-            />
-            <BookCover
-              name="Shuri The Warrior"
-              price={3200}
-              rating={2}
-              imgSrc={imgSrc}
-            />
+            {initialState.books.length ? (
+              bestSellingComics.first.map((comic) => {
+                return (
+                  <BookCover
+                    name={comic.title}
+                    price={3200}
+                    rating={4}
+                    imgSrc={comic.coverImageUrl}
+                    key={comic._id}
+                  />
+                );
+              })
+            ) : (
+              <h1>Loading...</h1>
+            )}
           </div>
         </div>
-        <div className={styles.joinCommunity}>
+        {/* <div className={styles.joinCommunity}>
           <p>
             Join a community of comic enthusiats, dive into engaging
             storieslines and create your own adventures
           </p>
+          <p>
+            We are committed to giving our readers an immersive experience with
+            every book we sell, ensuring our readers have an immaginative world
+            of experience is what we do. This are what our readers say about us.
+          </p>
+          <div className={styles.readersReviews}>
+            <div className={styles.review}>
+              <div>
+                <img src={greenLanternImg} alt="book cover" />
+                <h2>Wild Joker</h2>
+              </div>
+              <p>
+                {" "}
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+                facilis accusantium ad cum pariatur. Incidunt ratione maiores
+                minima consequuntur praesentium.{" "}
+              </p>
+              <button>Buy this book</button>
+            </div>
+            <div className={styles.review}>
+              <div>
+                <img src={greenLanternImg} alt="book cover" />
+                <h2>Wild Joker</h2>
+              </div>
+              <p>
+                {" "}
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+                facilis accusantium ad cum pariatur. Incidunt ratione maiores
+                minima consequuntur praesentium.{" "}
+              </p>
+              <button>Buy this book</button>
+            </div>
+            <div className={styles.review}>
+              <div>
+                <img src={greenLanternImg} alt="book cover" />
+                <h2>Wild Joker</h2>
+              </div>
+              <p>
+                {" "}
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+                facilis accusantium ad cum pariatur. Incidunt ratione maiores
+                minima consequuntur praesentium.{" "}
+              </p>
+              <button>Buy this book</button>
+            </div> 
+          </div>
         </div>
+
+            */}
       </main>
     </div>
   );
