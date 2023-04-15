@@ -242,3 +242,51 @@ cover; */
   width: 100%;
   justify-content: space-between;
 }
+
+.joinCommunity {
+  /* background: url("../../assets/HeroSection.png") no-repeat center center /
+  cover; */
+  color: white;
+  /* width: 80%; */
+  margin: 40px 0;
+  background: linear-gradient(80deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../../assets/HeroSection.png") no-repeat center center / cover;
+  /* background: rgba(39, 6, 92, 0.4); */
+  padding: 30px 30px;
+  font-family: "Lato", sans-serif;
+}
+.joinCommunity > p {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.joinCommunity > p:first-of-type {
+  font-size: 2rem;
+  font-family: “Comic Sans MS”, “Comic Sans”, cursive;
+  margin-bottom: 20px;
+}
+.readersReviews {
+  display: flex;
+  justify-content: space-between;
+}
+.readersReviews > .review {
+  width: 31%;
+}
+.readersReviews > .review > div > img {
+  width: 150px;
+  height: 200px;
+}
+.readersReviews > .review > button {
+  background: linear-gradient(80deg, purple, rgba(90, 10, 217, 1), rgba(74, 3, 186, 0.96));
+  color: #fff;
+  width: 120px;
+  padding: 10px 0;
+  text-align: center;
+  border-radius: 4px;
+  transition: all 800ms linear;
+  border: none;
+}
+
+.readersReviews .review > button:hover {
+  background: linear-gradient(80deg, rgba(90, 10, 217, 1), purple, rgba(74, 3, 186, 0.96));
+}
