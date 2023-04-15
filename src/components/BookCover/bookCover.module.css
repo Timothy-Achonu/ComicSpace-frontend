@@ -1,0 +1,61 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 32%;
+    color: white;
+    margin-top: 25px;
+    padding: 0 20px;
+    border-radius: 8px;
+}
+.container > *{
+   margin-bottom: 16px;
+}
+.comicName {
+    font-family: “Comic Sans MS”, “Comic Sans”, cursive;
+    font-size: 1.8rem;
+    margin-top: auto;
+    color: white;
+}
+.comicPrice {
+    display: flex;
+    align-items: center;
+}
+.comicPrice > span {
+ color:rgba(235, 72, 62, 1);
+ font-size: 0.9rem;
+}
+.comicRating {
+    display: flex;
+    align-items: center;
+}
+.comicRating > span {
+    margin-top: 5px;
+    color: rgba(255, 153, 0, 1);
+}
+.addToCartBtn {
+    background: linear-gradient(80deg, purple, rgba(90, 10, 217, 1), rgba(74, 3, 186, 0.96));
+    color: #fff;
+    width: 100%;
+    padding: 14px 0;
+    text-align: center;
+    border-radius: 7px;
+    transition: all 800ms linear;
+    cursor: pointer;
+    border: none;
+}
+.addToCartBtn:hover {
+    background: linear-gradient(80deg, rgba(90, 10, 217, 1), purple, rgba(74, 3, 186, 0.96));
+}
+.addToCartBtn > .addIcon {
+    color: white;
+    /* font-size: 4rem; */
+    /* background-color: wheat; */
+    margin-bottom: -3px;
+}
+ 
