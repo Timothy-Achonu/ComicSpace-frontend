@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './navbar.module.css';
 import { NavLink } from 'react-router-dom'
-import SearchFeild from './search/SearchField.jsx';
+import Search from './search/Search.jsx';
 import {BsCartDash} from 'react-icons/bs'
 import logo from '../../assets/ComicSpace.png';
 
