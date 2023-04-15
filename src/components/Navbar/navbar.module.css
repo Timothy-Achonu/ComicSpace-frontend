@@ -1,7 +1,7 @@
+
 .nav {
     display: flex;
-    padding:20px 10px;
-    width: 80%;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
@@ -13,4 +13,17 @@
 .cart {
     cursor: pointer;
     color: rgba(210, 207, 215, 1);
+}
+.nav .registerBtn {
+    /* background-color: rgba(90, 10, 217, 1); */
+    background: linear-gradient(80deg, purple, rgba(90, 10, 217, 1), rgba(74, 3, 186, 0.96));
+    color: #fff;
+    width: 120px;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 4px;
+    transition: all 800ms linear;
+}
+.nav .registerBtn:hover {
+    background: linear-gradient(80deg, rgba(90, 10, 217, 1), purple, rgba(74, 3, 186, 0.96));
 }
