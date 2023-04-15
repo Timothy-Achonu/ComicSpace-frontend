@@ -9,9 +9,9 @@ export default function Routing() {
     <div>
         <Router>
             <Routes>
-                <Route path="/category" element={<Home/>}/>
+                <Route path="/" element={<Home/>}/>
                 <Route path="/login" element={<Login/>}/>
-                <Route path="/" element={<Category/>}/>
+                <Route path="/category" element={<Category/>}/>
             </Routes>
         </Router>
     </div>
