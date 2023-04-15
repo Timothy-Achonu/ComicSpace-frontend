@@ -1,0 +1,19 @@
+section.product-count{
+    width: 100%;
+    height: 100px;
+    padding: 20px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    border-top: 1px solid var(--line) ;
+    border-bottom: 1px solid var(--line) ;
+}
+section.product-count p{
+    color: var(--textFaint)
+}
+section.product-count h3{
+    color: blue;
+    font-weight: 800;
+}

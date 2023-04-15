@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Routes,Route } from 'react-router-dom'
 import Home from '../../pages/homepage';
 import Login from '../../pages/loginpage';
-import Category from '../../pages/categorypage';
+import Category from '../../pages/categorypage/Category'
 
 export default function Routing() {
   return (

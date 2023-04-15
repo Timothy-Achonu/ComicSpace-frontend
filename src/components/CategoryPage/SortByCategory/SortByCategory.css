@@ -1,0 +1,15 @@
+div.cat-wrapper section.book-section .category-section{
+    width: 250px;
+    height: 300px;
+    border: 1px solid var(--line);
+    padding: 10px 20px;
+    margin-right: 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+div.cat-wrapper section.book-section ul{
+    list-style: none;
+}
