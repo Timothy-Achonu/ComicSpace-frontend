@@ -1,0 +1,16 @@
+div.cat-wrapper section.book-section{
+    padding: 35px 100px;
+}
+
+section.book-card {
+    width: 800px;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-around;
+}
+section.book-card div.book{
+    width: 380px;
+    height: 500px;
+    border-radius: 10px;
+    background-color: rgb(44, 44, 44);
+}
