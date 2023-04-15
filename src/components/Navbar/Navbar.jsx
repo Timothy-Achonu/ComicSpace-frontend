@@ -10,16 +10,16 @@ export default function Navbar() {
     <nav className={styles.nav}>
         <img src={logo} alt='logo'/>
         <NavLink to="/" >Home</NavLink>
-        <NavLink to="/" >Categories</NavLink>
-        <NavLink to="/" >Contact Us</NavLink>
-        <NavLink to="/" >About Us</NavLink>
+        <NavLink to="/category" >Categories</NavLink>
+        {/* <NavLink to="/" >Contact Us</NavLink>
+        <NavLink to="/" >About Us</NavLink> */}
         <Search />
-        <div className={styles.cart}>
+        {/* <div className={styles.cart}>
             Cart 
             <BsCartDash />
-        </div>
-        <NavLink to="/login" >Login</NavLink>
-        <NavLink to="/register" className={styles.registerBtn}>Register</NavLink>
+        </div> */}
+        {/* <NavLink to="/login" >Login</NavLink>
+        <NavLink to="/register" className={styles.registerBtn}>Register</NavLink> */}
     </nav>
   )
 }
