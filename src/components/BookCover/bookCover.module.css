@@ -34,10 +34,12 @@
 .comicPrice > span {
  color:rgba(235, 72, 62, 1);
  font-size: 0.9rem;
+ background-color: rgba(0, 0, 0, 0.7);
 }
 .comicRating {
     display: flex;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 .comicRating > span {
     margin-top: 5px;

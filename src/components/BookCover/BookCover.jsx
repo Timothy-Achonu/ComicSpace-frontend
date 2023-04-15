@@ -20,26 +20,32 @@ function starsNumber(num) {
   return starsArray;
 }
 
-
 export default function BookCover({ name, price, rating, imgSrc }) {
   const [navigatePage, setNavigatePage] = useState(false);
   function goToProductPage() {
-    setNavigatePage(true)
-    setTimeout(()=>{
-       setNavigatePage(false);
-    }, 100)
+    setNavigatePage(true);
+    setTimeout(() => {
+      setNavigatePage(false);
+    }, 100);
   }
   let navigate = useNavigate();
   useEffect(() => {
-    if(navigatePage) {
-      navigate("/productPage");
+    if (navigatePage) {
+      navigate("/product-description");
     }
-}, [navigatePage]);
+  }, [navigatePage]);
+  /* background: linear-gradient(80deg, white 22.7%, rgba(256, 256, 256, 0.3)),
+    url("../../assets/images/trendingImage.PNG") no-repeat center center / cover; */
+
   const bgStyles = {
     background: `url(${imgSrc}) no-repeat center center / cover`,
   };
   return (
-    <div style={bgStyles} className={styles.container} onClick={goToProductPage}>
+    <div
+      style={bgStyles}
+      className={styles.container}
+      onClick={goToProductPage}
+    >
       <div className={styles.comicName}>{name}</div>
       <div className={styles.comicPrice}>
         <TbCurrencyNaira />
