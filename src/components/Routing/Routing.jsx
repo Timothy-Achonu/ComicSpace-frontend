@@ -12,7 +12,7 @@ export default function Routing() {
                 <Route path="/" element={<Home/>}/>
                 <Route path="/login" element={<Login/>}/>
                 <Route path="/category" element={<Category/>}/>
-                <Route path="/product-description" element={<ProductPage/>}/> 
+                
             </Routes>
         </Router>
     </div>
