@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&family=Lato:wght@100;300;400&display=swap');
+
+
+.desc-text{
+    margin: 50px  50px;
+    font-family:'Lato';
+    line-height: 27px;
+    /* margin-top: 10px; */
+    /* font-family: 'Lato'; */
+}
+.reviewers{
+    display: flex;
+}
+
+.reviewers{
+    width: 400px;
+    font-family: 'Lato';
+}
+
+.reviewers-text h6{
+    font-size: 20px;
+    background: linear-gradient(93.4deg, rgba(74, 3, 186, 0.958428) 2.46%, #4824D8 21.65%, #1848C2 61.42%, rgba(58, 55, 226, 0.99563) 69.53%, rgba(90, 10, 217, 0.984637) 89.93%), #5A0AD9;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* margin-bottom: 3px; */
+    /* font-family: 'Lato'; */
+}
+
+.reviewers-img{
+    width: 80px;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.location{
+    margin-bottom: 10px;
+    
+}
+
+.reviewers-text p{
+    margin-top: 12px;
+    line-height: 30px;
+}
+
+.reviewers-text span{
+    font-size: 12px;
+}
+
+.reviewers-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+    justify-content: space-around;
+    border: 1px solid black;
+    padding:50px 100px;
+}
+
+.footer-hero{
+    /* width: 1544px; */
+    /* height: 354px; */
+    width: 100%;
+    /* border: 1px solid red; */
+    background: url('../../assets/product-footer-img.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footer-hero-text{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 588px;
+    padding: 50px 0 50px 100px;
+    /* justify-content: end;
+    align-items: start; */
+}
+
+.footer-hero-text h3{
+    font-size: 40px;
+    font-family: 'Comic Neue';
+    margin-bottom: 44px;
+}
+
+.footer-hero-text p{
+    font-size: 20px;
+    font-family: 'Lato';
+}
+
+
+@media screen and (min-width:700px) {
+    .desc-text{
+        margin: 50px 40px;
+    }
+}
