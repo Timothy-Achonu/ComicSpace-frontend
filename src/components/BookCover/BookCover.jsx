@@ -5,6 +5,8 @@ import { AiFillStar } from "react-icons/ai";
 import { AiOutlineStar } from "react-icons/ai";
 // import { MdAddCircle } from "react-icons/md";
 import { MdAddCircleOutline } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 function starsNumber(num) {
   const starsArray = [];
@@ -18,12 +20,26 @@ function starsNumber(num) {
   return starsArray;
 }
 
+
 export default function BookCover({ name, price, rating, imgSrc }) {
+  const [navigatePage, setNavigatePage] = useState(false);
+  function goToProductPage() {
+    setNavigatePage(true)
+    setTimeout(()=>{
+       setNavigatePage(false);
+    }, 100)
+  }
+  let navigate = useNavigate();
+  useEffect(() => {
+    if(navigatePage) {
+      navigate("/productPage");
+    }
+}, [navigatePage]);
   const bgStyles = {
     background: `url(${imgSrc}) no-repeat center center / cover`,
   };
   return (
-    <div style={bgStyles} className={styles.container}>
+    <div style={bgStyles} className={styles.container} onClick={goToProductPage}>
       <div className={styles.comicName}>{name}</div>
       <div className={styles.comicPrice}>
         <TbCurrencyNaira />
@@ -33,7 +49,7 @@ export default function BookCover({ name, price, rating, imgSrc }) {
         {rating} stars rating <span>{starsNumber(rating)} </span>{" "}
       </div>
       <button className={styles.addToCartBtn}>
-        Add to Cart <MdAddCircleOutline className={styles.addIcon} />{" "}
+        Buy Now <MdAddCircleOutline className={styles.addIcon} />{" "}
       </button>
     </div>
   );
