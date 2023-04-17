@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes,Route } from 'react-router-dom'
 import Home from '../../pages/homepage';
 import Login from '../../pages/loginpage';
 import Category from '../../pages/categorypage/Category'
+import ProductPage from '../../pages/productpage';
 
 export default function Routing() {
   return (
@@ -11,8 +12,8 @@ export default function Routing() {
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/login" element={<Login/>}/>
+                <Route path="/product-description" element={<Login/>}/>
                 <Route path="/category" element={<Category/>}/>
-                
             </Routes>
         </Router>
     </div>
